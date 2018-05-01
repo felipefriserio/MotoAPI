@@ -32,6 +32,10 @@ class MotoController{
     fun deletar(@PathVariable("placa") placa : String){
         motoService.deletar(placa)
     }
-
+    
+    @DeleteMapping
+    fun deletar(@RequestBody moto: Moto){
+        motoService.deletar(moto)
+    }
 
 }
